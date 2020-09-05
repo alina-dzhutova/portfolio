@@ -1,0 +1,126 @@
+:root {
+    --blue: rgb(3, 155, 229);
+    --red: rgb(234, 115, 109); 
+    --btnBg: rgb(251, 220, 77);
+    --line:  rgb(251, 220, 77);
+    --text: #161616;
+    --fr: 'M PLUS 1p';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: var(--fr);
+  font-weight: 400;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
+  max-width: 100%;
+  width: 50px;
+}
+.animate-border {
+  position: relative;
+  width: fit-content;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    height: 4px;
+    background-color: var(--line);
+    width: 0%;
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  &:before {
+    left: 50%;
+  }
+
+  &:after {
+    right: 50%;
+  }
+}
+
+.animate-border:hover:before,
+.animate-border:hover:after {
+  width: 55%;
+}
+
+.bottom-line {
+  position: relative;
+  width: fit-content;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: -5px;
+    right: -5px;
+    height: 12px;
+    background-color: var(--line);
+    z-index: -1;
+  }
+}
+
+button,
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.container {
+  @media(min-width:1200px) {
+		max-width: 1140px;
+		padding: 0;
+	}
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
